@@ -129,7 +129,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
         Glide.with(context)
                 .load(url)
-                .placeholder(R.drawable.new1)
+                .placeholder(R.drawable.coverloading)
                 .into(imageView);
     }
 }
