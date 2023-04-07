@@ -69,7 +69,7 @@ public class ContentsActivity extends AppCompatActivity {
         try {
             //读取assets里的文件
             AssetManager am = getResources().getAssets();
-            inputStream = am.open("ttt/"+fileName +".json");
+            inputStream = am.open("comic/" +fileName +".json");
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             //读取json文件里的内容

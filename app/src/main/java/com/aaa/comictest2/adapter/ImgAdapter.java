@@ -19,6 +19,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
+
     private ArrayList<String> urlList;
     private Context context;
 
@@ -66,7 +67,7 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
 //        RequestOptions options = new RequestOptions()
 //                .format(DecodeFormat.PREFER_ARGB_8888)
 //                .placeholder(R.drawable.loading);
-
+        int a =1;
         Glide.with(context)
                 .asBitmap()
                 .load(url)
@@ -83,10 +84,18 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
                         ViewGroup.LayoutParams para = imageView.getLayoutParams();
                         para.width = screenWidth;
                         para.height = height;
-//                        imageView.setImageBitmap(resource);
+                        imageView.setImageBitmap(resource);
+
+                        Picasso.with(context)
+                                .load(url)
+//                                .placeholder(R.drawable.loading)
+                                .resize(screenWidth,height)
+                                .into(imageView);
+
 //                        Glide.with(context)
 //                                .load(url)
 //                                .into(imageView);
+
                     }
 //                    @Override
 //                    public void onLoadFailed(@Nullable Drawable errorDrawable) {
@@ -94,10 +103,7 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
 //                    }
                 });
 
-        Picasso.with(context)
-                .load(url)
-                .placeholder(R.drawable.loading)
-                .into(imageView);
+
     }
 
 }

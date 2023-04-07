@@ -103,7 +103,6 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         Glide.with(context)
                 .asBitmap()
                 .load(url)
-                .placeholder(R.drawable.ic_launcher_background)
                 .into(new SimpleTarget<Bitmap>() {
                     @Override
                     public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
@@ -127,5 +126,10 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                     }
 
                 });
+
+        Glide.with(context)
+                .load(url)
+                .placeholder(R.drawable.new1)
+                .into(imageView);
     }
 }

@@ -67,7 +67,7 @@ public class IndexActivity extends AppCompatActivity {
         try {
             //读取assets里的文件
             AssetManager am = getResources().getAssets();
-            inputStream = am.open("ttt/index.json");
+            inputStream = am.open("comic/index.json");
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             //读取json文件里的内容
